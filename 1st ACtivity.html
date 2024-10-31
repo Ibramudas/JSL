@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            VALIDATING JS
+        </title>
+        <script>
+            function formvalidate(){
+                var x= document.forms["form"] ["fname"].value;
+                if (x==""){
+                    alert("Name must be filled out");
+                    return false;
+                }
+                else document.write("Name submitted");
+
+            }
+        </script>
+    </head>
+    <form name="form" onsubmit="formvalidate()">
+        <fieldset>
+            <legend>VALIDATING FORM</legend>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" id="text" name="fname">
+            <input type="submit" value="submit">
+            <p id="p"></p>
+        </fieldset>
+    </form>
+</html>

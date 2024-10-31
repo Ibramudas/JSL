@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <tile>JAVASCRIPT</tile>
+    </head>
+    <body>
+        <p>Write a number between 30 and 300</p>
+        <input type="number" id="in" min="30" max="300" required>
+        <button type="submit" onclick="validate()">Click here</button>
+        <h5 id="h5"></h5>
+        <script>
+            function validate(){
+                var inpobj= document.getElementById("in")
+                if(! inpobj.checkValidity()){
+                    document.getElementById("h5").innerHTML= inpobj.validationMessage;
+                }
+                else{
+                    document.getElementById("h5").innerHTML= "Input is okay"
+                }
+
+            }
+        </script>
